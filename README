@@ -1,0 +1,4 @@
+This is a simple implementation of some data structures in Go.
+
+Right now, it only contains the treap data structure.
+https://en.wikipedia.org/wiki/Treap
