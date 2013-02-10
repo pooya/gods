@@ -279,6 +279,10 @@ func (t *Treap) Insert(value int) {
 	t.head.Insert(value, &t.head)
 }
 
+func (t *Treap) Find(key int) *Node {
+	return t.head.Find(key)
+}
+
 func (t *Treap) Remove(value int) bool {
 	removed := t.head.Remove(value, &t.head)
 	if t.head == nil {

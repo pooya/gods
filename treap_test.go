@@ -67,3 +67,21 @@ func TestBasic1(t *testing.T) {
 		}
 	}
 }
+
+func TestFind(t *testing.T) {
+	treap := &Treap{}
+
+	for i := 0; i < count; i++ {
+		treap.Insert(i)
+	}
+	if !sort.IntsAreSorted(treap.Traverse2()) {
+		t.Error("not sorted")
+	}
+
+	for i := 0; i < count; i++ {
+		foundNode := treap.Find(i)
+		if foundNode == nil || foundNode.value != i {
+			t.Error("Could not find ", i)
+		}
+	}
+}
